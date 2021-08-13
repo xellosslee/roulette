@@ -26,6 +26,11 @@ h1 {
     /*text-shadow: -1px 0 #607D8B, 0 1px #607D8B, 1px 0 #607D8B, 0 -1px #607D8B;*/
 }
 
+#popup {
+    width: 800px;
+    height: 600px;
+}
+
 .container {
     position: absolute;
     top: 0;
@@ -36,6 +41,11 @@ h1 {
     width: 960px;
     height: 700px;
     text-align: center;
+}
+
+#popup .container {
+    width: 800px;
+    height: 600px;
 }
 
 .wrap {
@@ -50,11 +60,23 @@ h1 {
     left: 0;
 }
 
+#popup .wrap {
+    width: 500px;
+    height: 600px;
+}
+
 .item-list-wrap {
     width: 400px;
     position: absolute;
     left: 600px;
     top: 120px;
+}
+
+#popup .item-list-wrap {
+    width: 300px;
+    left: 500px;
+    top: 40px;
+    bottom: 0;
 }
 
 ul {
@@ -315,6 +337,10 @@ ul.lock .item-title[contenteditable]:hover {
     transition: background-color 0.2s ease;
     cursor: pointer;
     padding: 10px;
+}
+
+#popup #roll.button {
+    position: unset;
 }
 
 #roll.button::after {
