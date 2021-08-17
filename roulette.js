@@ -112,7 +112,7 @@ function updateData() {
 			color: color
 		})
 
-		$e.css('background', 'linear-gradient(to right, ' + color + ' 11%, rgba(0, 0, 0, 0) 0%)')
+		$e.css('background', 'linear-gradient(to right, ' + color + ' 35px, rgba(0, 0, 0, 0) 0%)')
 	})
 
 	R.Items = items
@@ -449,7 +449,7 @@ $(document).ready(function () {
 	if (R.autoSave && items && items.length > 0) {
 		var html = ''
 		items.forEach(e => {
-			html += `<li class="item" data-chance="6.67" style="background: linear-gradient(to right, ${e.color} 11%, rgba(0, 0, 0, 0) 0%);">
+			html += `<li class="item" data-chance="6.67" style="background: linear-gradient(to right, ${e.color} 35px, rgba(0, 0, 0, 0) 0%);">
 				<div class="item-title" placeholder="이름" contenteditable="true">${e.name}</div>
 				<div class="item-weight" data-weight="1"></div>
 				<div class="item-weight-add">+</div>
