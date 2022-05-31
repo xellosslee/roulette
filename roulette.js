@@ -109,7 +109,8 @@ function updateData() {
 			name: title,
 			angle: angle,
 			angleSum: angleSum,
-			color: color
+			color: color,
+			weight: weight,
 		})
 
 		$e.css('background', 'linear-gradient(to right, ' + color + ' 35px, rgba(0, 0, 0, 0) 0%)')
@@ -451,7 +452,7 @@ $(document).ready(function () {
 		items.forEach(e => {
 			html += `<li class="item" data-chance="6.67" style="background: linear-gradient(to right, ${e.color} 35px, rgba(0, 0, 0, 0) 0%);">
 				<div class="item-title" placeholder="이름" contenteditable="true">${e.name}</div>
-				<div class="item-weight" data-weight="1"></div>
+				<div class="item-weight" data-weight="${e.weight || 1}"></div>
 				<div class="item-weight-add">+</div>
 				<div class="item-weight-sub">-</div>
 				<div class="item-delete">X</div>
