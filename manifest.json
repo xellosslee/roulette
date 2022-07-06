@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "author": "xellossmail@gmail.com",
-    "name": "돌려돌려 돌림판 2",
-    "description": "기존 돌려돌려 돌림판을 바탕으로 기능 업그레이드(자동 저장 등)",
+    "name": "돌려돌려 돌림판 2.1",
+    "description": "한글입력 버그 수정, 전체삭제 추가",
     "version": "1.0.0",
     "action": {
         "default_popup": "popup.html",

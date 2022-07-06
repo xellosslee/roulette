@@ -176,16 +176,18 @@ $(document).on('keydown', function (evt) {
 	var $target = $(evt.target)
 	if (evt.key === 'Enter') {
 		evt.preventDefault()
-		cleanList()
-		if ($target.is('.item-title')) {
-			$target.blur()
-				.closest('li')
-				.next('li')
-				.find('.item-title').focus()
-		}
-		if ($target.is('[contenteditable]')) {
-			$target.blur()
-		}
+		setTimeout(function() {
+			cleanList()
+			if ($target.is('.item-title')) {
+				$target.blur()
+					.closest('li')
+					.next('li')
+					.find('.item-title').focus()
+			}
+			if ($target.is('[contenteditable]')) {
+				$target.blur()
+			}
+		},0)
 	} else if (evt.key === 'Escape') {
 		if ($target.is('[contenteditable]')) {
 			$target.blur()
@@ -497,6 +499,16 @@ $(document).on('click', '#roll', function (evt) {
 
 $(document).on('click', '.item-delete', function (evt) {
 	$(evt.currentTarget).closest('li').remove()
+	updateData()
+	cleanList()
+})
+
+$(document).on('click', '#deleteAll', function (evt) {
+	$('li').each( function() {
+		if ( $(this).attr('class') == 'item') {
+			$(this).remove();
+		}
+	})
 	updateData()
 	cleanList()
 })
