@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "author": "xellossmail@gmail.com",
-    "name": "돌려돌려 돌림판 2.1",
-    "description": "한글입력 버그 수정, 전체삭제 추가",
+    "name": "돌려돌려 돌림판 2.2",
+    "description": "팝업에 전체 삭제 버튼 추가, 내부로직 수정",
     "version": "1.0.0",
     "action": {
         "default_popup": "popup.html",
