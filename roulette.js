@@ -172,22 +172,20 @@ $(document).on('click', '.item-weight-add, .item-weight-sub', function (evt) {
 	updateData()
 })
 
-$(document).on('keydown', function (evt) {
+$(document).on('keypress', function (evt) {
 	var $target = $(evt.target)
 	if (evt.key === 'Enter') {
 		evt.preventDefault()
-		setTimeout(function() {
-			cleanList()
-			if ($target.is('.item-title')) {
-				$target.blur()
-					.closest('li')
-					.next('li')
-					.find('.item-title').focus()
-			}
-			if ($target.is('[contenteditable]')) {
-				$target.blur()
-			}
-		},0)
+		cleanList()
+		if ($target.is('.item-title')) {
+			$target.blur()
+				.closest('li')
+				.next('li')
+				.find('.item-title').focus()
+		}
+		if ($target.is('[contenteditable]')) {
+			$target.blur()
+		}
 	} else if (evt.key === 'Escape') {
 		if ($target.is('[contenteditable]')) {
 			$target.blur()
